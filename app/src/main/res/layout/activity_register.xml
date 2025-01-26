@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35sp"
+        android:fontFamily="@font/autour_one"
+        android:text="Welcome To"
+        android:textColor="@color/blue1"
+        android:textSize="26sp"
+        android:layout_marginLeft="16sp"
+        />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="140dp"
+        android:fontFamily="@font/bevan"
+        android:text=" AgriApp..."
+        android:textColor="@color/blue4"
+        android:textSize="26sp" />
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvv"
+        android:text="Sign Up Here"
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal"
+        android:fontFamily="@font/autour_one"
+        android:textSize="24sp"
+        android:textColor="@color/green"
+        android:textStyle="bold"
+        />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/blue3"
+        app:cardCornerRadius="8sp"
+        app:cardElevation="24sp"
+        android:layout_margin="16sp"
+        android:layout_marginTop="50dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:id="@+id/etregistername"
+                android:hint="Name"
+                android:textColorHint="@color/blue"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/autour_one"
+                android:inputType="textPersonName"
+                android:layout_margin="16sp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:id="@+id/etregisterEmail"
+                android:hint="Email"
+                android:textColorHint="@color/blue"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/autour_one"
+                android:inputType="textPersonName"
+                android:layout_margin="16sp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:id="@+id/etregisterMobileNo"
+                android:hint="Mobile No"
+                android:textColorHint="@color/blue"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/autour_one"
+                android:inputType="textPersonName"
+                android:layout_margin="16sp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:id="@+id/etregisterUserName"
+                android:hint="UserName"
+                android:textColorHint="@color/blue"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/autour_one"
+                android:inputType="textPersonName"
+                android:layout_margin="16sp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:id="@+id/etregisterpassword"
+                android:hint="Password"
+                android:textColorHint="@color/blue"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/autour_one"
+                android:inputType="textPersonName"
+                android:layout_margin="16sp"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/SignUpbtn"
+                android:text="Sign Up"
+                android:background="@color/blue1"
+                android:fontFamily="@font/autour_one"
+                android:layout_margin="30sp"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+
+
+        </LinearLayout>
