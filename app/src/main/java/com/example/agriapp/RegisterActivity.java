@@ -15,6 +15,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
@@ -31,12 +32,16 @@ public class RegisterActivity extends AppCompatActivity {
 
     ProgressDialog progressDialog;
 
+    FirebaseAuth auth;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_register);
+        auth=FirebaseAuth.getInstance();
+
         tv1=findViewById(R.id.tv1);
         tv2=findViewById(R.id.tv2);
         tv3=findViewById(R.id.tvv);
