@@ -6,13 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RegisterActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/farm2">
 
     <TextView
         android:id="@+id/tv1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="35sp"
+        android:layout_marginTop="20sp"
         android:fontFamily="@font/autour_one"
         android:text="Welcome To"
         android:textColor="@color/blue1"
@@ -26,9 +27,17 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="140dp"
         android:fontFamily="@font/bevan"
-        android:text=" AgriApp..."
+        android:text=" AgriFarm"
         android:textColor="@color/blue4"
         android:textSize="26sp" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp"
+        app:cardBackgroundColor="@drawable/custom"
+
+        />
     <TextView
 
         android:layout_width="match_parent"
@@ -42,19 +51,14 @@
         android:textColor="@color/green"
         android:textStyle="bold"
         />
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/blue3"
-        app:cardCornerRadius="8sp"
-        app:cardElevation="24sp"
-        android:layout_margin="16sp"
-        android:layout_marginTop="50dp"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:cardBackgroundColor="@color/blue3"-->
+<!--        app:cardCornerRadius="30sp"-->
+<!--        app:cardElevation="20sp"-->
+<!--        android:layout_margin="16sp"-->
+<!--       />-->
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50sp"
@@ -66,7 +70,10 @@
                 android:textStyle="bold"
                 android:fontFamily="@font/autour_one"
                 android:inputType="textPersonName"
-                android:layout_margin="16sp"/>
+                android:layout_margin="10sp"
+                android:background="@drawable/custom"
+
+                />
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50sp"
@@ -78,7 +85,8 @@
                 android:textStyle="bold"
                 android:fontFamily="@font/autour_one"
                 android:inputType="textPersonName"
-                android:layout_margin="16sp"/>
+                android:layout_margin="10sp"
+                android:background="@drawable/custom"/>
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50sp"
@@ -90,7 +98,8 @@
                 android:textStyle="bold"
                 android:fontFamily="@font/autour_one"
                 android:inputType="textPersonName"
-                android:layout_margin="16sp"/>
+                android:layout_margin="16sp"
+                android:background="@drawable/custom"/>
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50sp"
@@ -102,32 +111,35 @@
                 android:textStyle="bold"
                 android:fontFamily="@font/autour_one"
                 android:inputType="textPersonName"
-                android:layout_margin="16sp"/>
+                android:layout_margin="16sp"
+                android:background="@drawable/custom"/>
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50sp"
                 android:id="@+id/etregisterpassword"
                 android:hint="Password"
-                android:textColorHint="@color/blue"
+                android:textColorHint="@color/black"
                 android:textSize="20sp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:fontFamily="@font/autour_one"
                 android:inputType="textPersonName"
-                android:layout_margin="16sp"/>
+                android:layout_margin="16sp"
+                android:background="@drawable/custom"/>
+
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/SignUpbtn"
                 android:text="Sign Up"
-                android:background="@color/blue1"
+                android:background="@color/blue4"
                 android:fontFamily="@font/autour_one"
                 android:layout_margin="30sp"
                 android:textStyle="bold"
                 android:textSize="22sp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                />
         </LinearLayout>
 
 
 
-        </LinearLayout>

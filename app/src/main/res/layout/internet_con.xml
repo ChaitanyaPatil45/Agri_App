@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/red2"
+    android:gravity="center">
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/wifi"
+       />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Internet"
+        android:textSize="40sp"
+        android:fontFamily="@font/autour_one"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        android:layout_marginTop="10sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please Connect To Your Network"
+        android:textSize="16sp"
+        android:fontFamily="@font/autour_one"
+        android:textColor="@color/red"
+        android:textStyle="bold"
+        android:layout_marginTop="10sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="60sp"
+        android:id="@+id/btn_network"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/btn_retry"
+        android:text="Retry"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:fontFamily="@font/autour_one"
+        android:textSize="18sp"/>
+
+
+
+
+
+
+
+</LinearLayout>

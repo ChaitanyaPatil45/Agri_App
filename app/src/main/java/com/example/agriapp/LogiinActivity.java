@@ -11,11 +11,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
@@ -31,24 +37,33 @@ public class LogiinActivity extends AppCompatActivity {
     Button btn;
     CheckBox checkBox;
     ProgressDialog progressDialog;
+    CardView cardView;
+
+    FirebaseAuth auth;
 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        auth=FirebaseAuth.getInstance();
         setContentView(R.layout.activity_logiin);
-        tvtitle=findViewById(R.id.tvtt);
+       // tvtitle=findViewById(R.id.tvtt);
         tvNewUser=findViewById(R.id.tvnewUser);
         tvRegister=findViewById(R.id.tvnew);
         etEmail=findViewById(R.id.etEmail);
         etPassword=findViewById(R.id.etPassword);
         btn=findViewById(R.id.btnLogin);
-        checkBox=findViewById(R.id.cbshowhide);
+        //checkBox=findViewById(R.id.cbshowhide);
 
         btn.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
+
+                boolean email=etEmail.getText().toString().isEmpty();
+                boolean pass=etPassword.getText().toString().isEmpty();
+
                 if(etEmail.getText().toString().isEmpty())
                 {
                     etEmail.setError("Enter Your Email");
@@ -64,12 +79,23 @@ public class LogiinActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    progressDialog=new ProgressDialog(LogiinActivity.this);
-                    progressDialog.setTitle("Please Wait");
-                    progressDialog.setMessage("Login In Process");
-                    progressDialog.show();
+                  /*  auth.createUserWithEmailAndPassword(email,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if(task.isSuccessful())
+                            {
+                                //Toast.makeText(this,"Sing Up Successful ",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(LogiinActivity.this,"Sign Up Done",Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(LogiinActivity.this,RegisterActivity.class));
+                            }
+                        }
+                    });*/
+                 progressDialog=new ProgressDialog(LogiinActivity.this);
+                  progressDialog.setTitle("Please Wait");
+                 progressDialog.setMessage("Login In Process");
+                  progressDialog.show();
 
-                    userLogin();
+              userLogin();
                 }
 
             }
@@ -86,7 +112,7 @@ public class LogiinActivity extends AppCompatActivity {
 
     }
 
-    private void userLogin() {
+   private void userLogin() {
 
         AsyncHttpClient client=new AsyncHttpClient();
         RequestParams params=new RequestParams();
@@ -133,6 +159,4 @@ public class LogiinActivity extends AppCompatActivity {
 
 
 
-    }
-
-}
+    }}
